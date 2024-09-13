@@ -1,0 +1,21 @@
+start:
+  args:
+  - reader-node
+  - merger
+  - relayer
+  - firehose
+  - substreams-tier1
+  - substreams-tier2
+  flags:
+    advertise-chain-name: "test-cluster"
+    common-first-streamable-block: 1
+    reader-node-path: "firesol"
+    reader-node-arguments: |
+      fetch
+      rpc
+      http://localhost:8899
+      1
+      --state-dir
+      ./firehose-data/reader/data
+    substreams-tier1-block-type: "sf.solana.type.v1.Block"
+    substreams-tier1-grpc-listen-addr: :9000

@@ -3,7 +3,9 @@
 .idea
 .env
 target
+**/*.log
 **/*.rs.bk
+firehose-data
 node_modules
 test-ledger
 .yarn
